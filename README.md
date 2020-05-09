@@ -70,6 +70,21 @@ O comando abaixo retorna todas as imagens do docker, inclusive as que estão par
 ```bash
 > npm install cors
 ```
+## Acessando terminal container do docker 
+1. no terminal (Windows ou Linux) execute o seguinte comando: 
+```bash
+> docker exec -it nomedocontainer bash
+```
+## Copiando arquivo ou diretorio do container para maquina local no docker:
+1. no terminal (Windows ou Linux) execute o seguinte comando: 
+- Copiando Diretório Completo
+```bash
+docker cp nomeimagem:/home/repositorioRemoto /home/repositorioLocal
+```
+- Copiando Arquivo
+```bash
+docker cp nomeimagem:/home/arquivoRemoto.csv /home/repositorioLocal
+```
 # Dias úteis
 
 ## https://yarnpkg.com/ - Ferramenta parecida com npm para gestão de pacotes mais veloz.
