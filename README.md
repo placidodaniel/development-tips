@@ -33,7 +33,7 @@
 ```bash
 > docker pull mongo
 ```
-2. Configurando container para rodar na porta 27017 (Porta Local : Porta do Container) com o nome 'mongodb'
+2. Configurando container para rodar na porta 27017 (Porta Local : Porta do Container) com o nome 'mongodb'. Veja os parâmetros utilizados abaixo no comando `docker run`:
 
 `--name` = nome da container que esta sendo criado
 
