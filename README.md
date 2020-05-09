@@ -101,7 +101,7 @@ O comando abaixo retorna todas as imagens do docker, inclusive as que estão par
 ```
 - O atributo `name` especifica o nome do container a ser gerado (teste-postgres);
 - No atributo `POSTGRES_PASSWORD` foi indicada a senha do administrador (para o usuário default postgres);
-- O atributo `-p` indica a porta (5432) em que se dará a comunicação com o PostgreSQL, a qual será mapeada para a porta default (5432) deste SGBD dentro do container, ou seja, porta exporta(Maquina local) para porta interna (Dentro do container);
+- O atributo `-p` indica a porta (5432) em que se dará a comunicação com o PostgreSQL, a qual será mapeada para a porta default (5432) deste SGBD dentro do container, ou seja, porta externa(localhost) para porta interna (Dentro do container);
 - Através do atributo `-v` foi criado um volume, especificando assim o diretório no Ubuntu Desktop em que serão gravados os arquivos de dados (E:\Users\daniel\apps\postgres\db);
 - Quanto ao atributo `-d`, este parâmetro determina que o container em questão será executado como um serviço em background;
 - Temos indicada ainda a imagem utilizada como base para a geração do container (postgres).
