@@ -3,9 +3,9 @@
 # Criando aplicação com nodejs:
 
 1. Cria o arquivo package.json -> Guarda as dependências do projeto em package.json
-```bash
+``bash
 > npm init -y 
-```
+``
 2. Cria primeira dependência. Express é um microframework que trata rodas e views
 ```bash
 > npm install express  
