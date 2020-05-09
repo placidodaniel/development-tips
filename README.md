@@ -1,4 +1,6 @@
 # development-tips - Dicas úteis que fui coletando para auxiliar no dev.
+Fique a vontade para contrinuir
+
 
 # NodeJS
 
@@ -120,3 +122,7 @@ docker cp nomeimagem:/home/arquivoRemoto.csv /home/repositorioLocal
 - Através do atributo `-v` foi criado um volume, especificando assim o diretório no Ubuntu Desktop em que serão gravados os arquivos de dados (E:\Users\daniel\apps\postgres\db);
 - Quanto ao atributo `-d`, este parâmetro determina que o container em questão será executado como um serviço em background;
 - Temos indicada ainda a imagem utilizada como base para a geração do container (postgres).
+
+## Tenho Dúvidas... O que Faço?! ❓
+
+Caso tenham dúvidas ou sugerirem dicas ou correções, sintam-se a vontade em abrir uma **[ISSUE AQUI](https://github.com/infolouco/development-tips/issues)**. Assim que possível, estarei respondendo as todas as dúvidas que tiverem!
