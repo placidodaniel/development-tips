@@ -27,16 +27,16 @@
 
 # Docker
 
-## Instalando o Mongo com docker utilizando no NodeJs
+## Instalando o Mongo por meio do docker e utilizando no NodeJs
 
 1. Baixa a ultima versão do mongodb
 ```bash
 > docker pull mongo
 ```
 2. Configurando container para rodar na porta 27017 (Porta Local : Porta do Container) com o nome 'mongodb'
---name = nome da container que esta sendo criado
--p = redirecionamento de porta, toda a vez que acessar a porta 27017 da minha maquina acessa a porta 27017 mongodb
--d = qual imagem se deseja utilizar (No caso baixamos a imagem do mongo)
+`--name` = nome da container que esta sendo criado
+`-p` = redirecionamento de porta, toda a vez que acessar a porta 27017 da minha maquina acessa a porta 27017 mongodb
+`-d` = qual imagem se deseja utilizar (No caso baixamos a imagem do mongo)
 ```bash
 > docker run --name mongodb -p 27017:27017 -d mongo
 ```
