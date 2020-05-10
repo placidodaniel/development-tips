@@ -1,5 +1,5 @@
 # development-tips - Dicas úteis que fui coletando para auxiliar no dev.
-Fique a vontade para contrinuir
+Fique a vontade para contribuir!
 
 
 # NodeJS
