@@ -126,9 +126,10 @@ docker cp nomeimagem:/home/arquivoRemoto.csv /home/repositorioLocal
 # Linux
 
 ## Resolvendo problemas de pacotes quebrados. 
-1. Se você já tentou de tudo e não consguiu, utilize o comando abaixo, removendo os pacotes recursivamente (Do último para o primeiro em termos de dependência).
+1. Se você já tentou de tudo e não conseguiu resolver seu problema com pacotes quebrados no linux, utilize o comando abaixo, removendo os pacotes recursivamente (Do último para o primeiro em termos de dependência).
 ```bash
 sudo dpkg --remove --force-remove-reinstreq nome_pacote
+sudo apt update
 ```
 
 ## Tenho Dúvidas... O que Faço?! ❓
