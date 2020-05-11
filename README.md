@@ -123,6 +123,14 @@ docker cp nomeimagem:/home/arquivoRemoto.csv /home/repositorioLocal
 - Quanto ao atributo `-d`, este parâmetro determina que o container em questão será executado como um serviço em background;
 - Temos indicada ainda a imagem utilizada como base para a geração do container (postgres).
 
+# Linux
+
+## Resolvendo problemas de pacotes quebrados. 
+1. Se você já tentou de tudo e não consguiu, utilize o comando abaixo, removendo os pacotes recursivamente (Do último para o primeiro em termos de dependência).
+```bash
+sudo dpkg --remove --force-remove-reinstreq nome_pacote
+```
+
 ## Tenho Dúvidas... O que Faço?! ❓
 
 Caso tenham dúvidas ou sugerirem dicas ou correções, sintam-se a vontade em abrir uma **[ISSUE AQUI](https://github.com/infolouco/development-tips/issues)**. Assim que possível, estarei respondendo as todas as dúvidas que tiverem!
