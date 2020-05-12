@@ -131,6 +131,16 @@ sudo dpkg --remove --force-remove-reinstreq nome_pacote
 sudo apt update
 ```
 
+# heroku
+
+## Como fazer deploy de uma aplicação com node no heroku:
+
+Caso queriam estudar como fazer uma plublicação de uma aplicação desenvolvida com nodejs, basta seguir a explicação abaixo:
+
+https://devcenter.heroku.com/articles/getting-started-with-nodejs
+
+
+
 ## Tenho Dúvidas... O que Faço?! ❓
 
 Caso tenham dúvidas ou sugerirem dicas ou correções, sintam-se a vontade em abrir uma **[ISSUE AQUI](https://github.com/infolouco/development-tips/issues)**. Assim que possível, estarei respondendo as todas as dúvidas que tiverem!
