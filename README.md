@@ -1,6 +1,5 @@
-# development-tips - Dicas úteis que fui coletando para auxiliar no dev.
-Fique a vontade para contrinuir
-
+# Dicas úteis para trabalhar com o seu dia a dia no desenvolvimento
+Fui reunindo essas dicas durante um intervalo de tempo, que pode ser úteis no seu dia a dia. 
 
 # NodeJS
 
@@ -87,7 +86,7 @@ docker cp nomeimagem:/home/repositorioRemoto /home/repositorioLocal
 ```bash
 docker cp nomeimagem:/home/arquivoRemoto.csv /home/repositorioLocal
 ```
-# Dias úteis
+# Dias úteis ⭐️
 
 ## https://yarnpkg.com/ - Ferramenta parecida com npm para gestão de pacotes mais veloz.
 
