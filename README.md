@@ -76,6 +76,16 @@ O comando abaixo retorna todas as imagens do docker, inclusive as que estão par
 ```bash
 > docker exec -it nomedocontainer bash
 ```
+## Vendo os logs de um container do docker
+1. no terminal (Windows ou Linux) execute o seguinte comando: 
+```bash
+> docker logs nomedocontainer 
+```
+## Vendo o volume configurando de um container do docker
+1. no terminal (Windows ou Linux) execute o seguinte comando: 
+```bash
+> docker volume inspect nomedocontainer 
+```
 ## Copiando arquivo ou diretorio do container para maquina local no docker:
 1. no terminal (Windows ou Linux) execute o seguinte comando: 
 - Copiando Diretório Completo
@@ -139,7 +149,11 @@ Caso queriam estudar como fazer uma plublicação de uma aplicação desenvolvid
 
 https://devcenter.heroku.com/articles/getting-started-with-nodejs
 
-
+## scale aplication heroku:
+```bash
+heroku ps:scale web=0 
+heroku ps:scale web=1 
+```
 
 ## Tenho Dúvidas... O que Faço?! ❓
 
