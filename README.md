@@ -81,7 +81,7 @@ O comando abaixo retorna todas as imagens do docker, inclusive as que estão par
 ```bash
 > docker logs nomedocontainer 
 ```
-## Vendo o volume configurando de um container do docker
+## Vendo o volume configurado de um container do docker
 1. no terminal (Windows ou Linux) execute o seguinte comando: 
 ```bash
 > docker volume inspect nomedocontainer 
