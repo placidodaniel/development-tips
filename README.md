@@ -30,7 +30,7 @@ Fique a vontade para contribuir!
 
 ## Como alterar a versão padrão do Python no Linux
 
-1. Se você tem mais de uma versão do python instalada no Linux e quer ter uma padrão ou precisa ficar mudando, basta utilizar o comando abaixo de acordo com a verso que você deseja:
+1. Se você tem mais de uma versão do python instalada no Linux e quer ter uma padrão ou precisa ficar mudando, basta utilizar o comando abaixo de acordo com a versão que você deseja:
 ```bash
 > sudo ln -sf /usr/bin/python3.6 /usr/bin/python
 ```
