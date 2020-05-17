@@ -87,8 +87,10 @@ O comando abaixo retorna todas as imagens do docker, inclusive as que estão par
 ## Vendo os logs de um container do docker
 1. no terminal (Windows ou Linux) execute o seguinte comando: 
 ```bash
-> docker logs nomedocontainer 
+> docker logs -f --tail=100 postgresdb 
 ```
+`-f` = fica escutando o arquivo de logs. 
+`--tail=100` = Mostra os 100 últimos registros de logs.
 ## Vendo o volume configurado de um container do docker
 1. no terminal (Windows ou Linux) execute o seguinte comando: 
 ```bash
