@@ -153,6 +153,7 @@ sudo apt update
 ```
 # Ambiente de desenvolvimento java no Visual Studio. 
 1. Instale os seguintes aplicativos.
+
 git 
 https://git-scm.com/download/win
 
@@ -166,8 +167,10 @@ Visual Studio Code
 https://code.visualstudio.com/
 
 Visual Studio Code Extensions
+
 https://www.youtube.com/redirect?v=vDCGeZehtQg&event=video_description&q=https%3A%2F%2Fblog.bitsrc.io%2Ftop-10-vs-code-extensions-for-frontend-developers-in-2018-7992282db2ca&redir_token=NtqaCMhqeQQlZV7Brxn30l7tSx98MTU5MDQxMjgyOEAxNTkwMzI2NDI4
-https://www.youtube.com/redirect?v=vDCGeZehtQg&event=video_description&q=https%3A%2F%2Fonextrapixel.com%2Fbest-visual-studio-code-extensions%2F&redir_token=NtqaCMhqeQQlZV7Brxn30l7tSx98MTU5MDQxMjgyOEAxNTkwMzI2NDI4
+
+https://www.youtube.com/redirect?v=vDCGeZehtQg&event=video_description&q=https%3A%2F%2Fonextrapixel.com%2Fbest-visual-studio-code-extensions%2F&redir_token=NtqaCMhqeQQlZV7Brxn30l7tSx98MTU5MDQxMjgyOEAxNTkwMzI2NDI4]
 
 # heroku
 
