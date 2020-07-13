@@ -161,9 +161,13 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE 
 ```
 
 dPDFSETTINGS	Description
+
 /prepress (default)	Higher quality output (300 dpi) but bigger size
+
 /ebook	Medium quality output (150 dpi) with moderate output file size
+
 /screen	Lower quality output (72 dpi) but smallest possible output file size
+
 
 # Ambiente de desenvolvimento java no Visual Studio. 
 1. Instale os seguintes aplicativos.
