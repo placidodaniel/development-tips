@@ -151,6 +151,20 @@ docker cp nomeimagem:/home/arquivoRemoto.csv /home/repositorioLocal
 sudo dpkg --remove --force-remove-reinstreq nome_pacote
 sudo apt update
 ```
+
+## Reduzindo tamanho de um PDF por meio do GS do linux
+```bash
+sudo apt install ghostscript
+```
+```bash
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=compressed_PDF_file.pdf input_PDF_file.pdf
+```
+
+dPDFSETTINGS	Description
+/prepress (default)	Higher quality output (300 dpi) but bigger size
+/ebook	Medium quality output (150 dpi) with moderate output file size
+/screen	Lower quality output (72 dpi) but smallest possible output file size
+
 # Ambiente de desenvolvimento java no Visual Studio. 
 1. Instale os seguintes aplicativos.
 
