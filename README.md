@@ -195,6 +195,10 @@ https://www.youtube.com/redirect?v=vDCGeZehtQg&event=video_description&q=https%3
 ```bash
 git clone git clone <url-do-repositorio-do-projeto>
 ```
+## Para clonar um branch especifico
+```bash
+git clone -b minhaBranch git@github.com:user/myproject.git
+```
 ## Para alternar para um branch especifico:
 ```bash
 git checkout -b <nome-do-seu-branch-local> origin/<nome-do-branch-remoto>
