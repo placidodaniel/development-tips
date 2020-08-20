@@ -175,9 +175,11 @@ Na pasta /home/user/.ssh de as permissões da seguinte forma:
 chmod 600 authorized_keys 
 cd ..
 chmod 700 .ssh
-```bash
+```
 
 Pronto!!!
+
+https://www.youtube.com/watch?v=ICIz5dE3Xfg
 
 ## Resolvendo problemas de pacotes quebrados. 
 1. Se você já tentou de tudo e não conseguiu resolver seu problema com pacotes quebrados no linux, utilize o comando abaixo, removendo os pacotes recursivamente (Do último para o primeiro em termos de dependência).
