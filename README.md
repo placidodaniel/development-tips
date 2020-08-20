@@ -144,6 +144,32 @@ docker cp nomeimagem:/home/arquivoRemoto.csv /home/repositorioLocal
 - Temos indicada ainda a imagem utilizada como base para a geração do container (postgres).
 
 # Linux
+## Configurando SSH para trabalhar no ubuntu
+adduser deploy 
+usermod -aG sudo deploy
+
+1. Primeiro crie sua chave SSH em sua máquina:
+```bash
+ssh-keygen -t rsa
+```
+Depois de inserir este comando, algumas novas perguntas aparecerão:
+
+Insira o arquivo no qual deseja salvar a chave (/home/user/.ssh/id_rsa):
+
+Geralmente, recomenda-se simplesmente deixá-lo como está (pressione ENTER sem digitar nada) para que o gerador de chaves possa criar o par de chaves no local padrão (neste tutorial eu inseri um nome diferente tut_id para evitar chaves duplicadas, (o dispositivo já tinha um id_rsa chaves geradas). As duas primeiras perguntas que aparecerão:
+
+Introduza a frase de acesso (empty for no passphrase). Então introduza a mesma frase novamente.
+
+Agora por razões de conveniência, eu gosto de deixar os vazios também. Dessa forma, depois de definir as teclas para cima com o seu servidor remoto, você não precisará usar qualquer tipo de senha para o login. Você simplesmente digita o comando ssh user@serverip e ele irá fazer o login enquanto as chaves são corretamente configuradas. Mas se você precisar de mais segurança, digite uma frase-senha nesta seção. Se escolher esta opção, terá de introduzir a palavra-passe sempre que ligar ao dispositivo remoto.
+
+IMPORTANTE! Existem duas chaves criadas aqui (PRIVATE e PUBLIC): tut_id e tut_id.pub (no seu caso, deve ser id_rsa e id_rsa.pub). Tome muito cuidado com o arquivo chamado id_rsa (esta é a chave PRIVATE), tenha apenas em seu dispositivo local e não dê a NINGUÉM.
+2. Copiando a chave pública para o servidor remoto
+Depois de gerar o par de chaves RSA, temos que colocar nossa chave pública no servidor virtual remoto.
+Há um comando simples que colocará sua chave pública diretamente no arquivo do authorized_keys do servidor remoto (este arquivo mantém todas as chaves públicas:
+```bash
+ssh-copy-id user@serverip
+```
+Pronto!!!
 
 ## Resolvendo problemas de pacotes quebrados. 
 1. Se você já tentou de tudo e não conseguiu resolver seu problema com pacotes quebrados no linux, utilize o comando abaixo, removendo os pacotes recursivamente (Do último para o primeiro em termos de dependência).
