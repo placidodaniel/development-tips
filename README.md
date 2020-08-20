@@ -169,6 +169,14 @@ Há um comando simples que colocará sua chave pública diretamente no arquivo d
 ```bash
 ssh-copy-id user@serverip
 ```
+3. Configurando permissões
+Na pasta /home/user/.ssh de as permissões da seguinte forma:
+```bash
+chmod 600 authorized_keys 
+cd ..
+chmod 700 .ssh
+```bash
+
 Pronto!!!
 
 ## Resolvendo problemas de pacotes quebrados. 
