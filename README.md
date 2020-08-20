@@ -177,6 +177,17 @@ cd ..
 chmod 700 .ssh
 ```
 
+sudo apt install docker.io
+usermod -aG docker deploy 
+
+com o usuário deploy 
+docker run --name database -e POSTGRES_PASSWORD=senha -p 17863:5432 --restart always -d postgres
+
+docker exec -it database /bin/bash
+
+
+
+
 Pronto!!!
 
 https://www.youtube.com/watch?v=ICIz5dE3Xfg
