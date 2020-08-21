@@ -184,8 +184,11 @@ com o usuário deploy
 docker run --name database -e POSTGRES_PASSWORD=senha -p 17863:5432 --restart always -d postgres
 
 docker exec -it database /bin/bash
-
-
+su postgres
+psql
+CREATE DATABASE empresas;
+CREATE USER appemp WITH ENCRYPTED PASSWORD='senha';
+GRANT ALL PRIVILEGES ON DATABASE empresas TO appemp;
 
 
 Pronto!!!
