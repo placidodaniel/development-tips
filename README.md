@@ -144,11 +144,16 @@ docker cp nomeimagem:/home/arquivoRemoto.csv /home/repositorioLocal
 - Temos indicada ainda a imagem utilizada como base para a geração do container (postgres).
 
 # Linux
-## Configurando SSH para trabalhar no ubuntu
+## Configurando servidor Linux do Zero
+1. Acesse o servidor com o usuário root e crie um usuário. Por exemplo usuário deploy.
+```bash
 adduser deploy 
+```
+2. Dando permissão de sudo para o usuário deploy. 
+```bash
 usermod -aG sudo deploy
-
-1. Primeiro crie sua chave SSH em sua máquina:
+```
+3. Configurando sua chave SSH em sua máquina para acessar o servidor linux por meio do terminal linux:
 ```bash
 ssh-keygen -t rsa
 ```
@@ -163,36 +168,48 @@ Introduza a frase de acesso (empty for no passphrase). Então introduza a mesma 
 Agora por razões de conveniência, eu gosto de deixar os vazios também. Dessa forma, depois de definir as teclas para cima com o seu servidor remoto, você não precisará usar qualquer tipo de senha para o login. Você simplesmente digita o comando ssh user@serverip e ele irá fazer o login enquanto as chaves são corretamente configuradas. Mas se você precisar de mais segurança, digite uma frase-senha nesta seção. Se escolher esta opção, terá de introduzir a palavra-passe sempre que ligar ao dispositivo remoto.
 
 IMPORTANTE! Existem duas chaves criadas aqui (PRIVATE e PUBLIC): tut_id e tut_id.pub (no seu caso, deve ser id_rsa e id_rsa.pub). Tome muito cuidado com o arquivo chamado id_rsa (esta é a chave PRIVATE), tenha apenas em seu dispositivo local e não dê a NINGUÉM.
-2. Copiando a chave pública para o servidor remoto
+4. Copiando a chave pública para o servidor remoto
 Depois de gerar o par de chaves RSA, temos que colocar nossa chave pública no servidor virtual remoto.
 Há um comando simples que colocará sua chave pública diretamente no arquivo do authorized_keys do servidor remoto (este arquivo mantém todas as chaves públicas:
 ```bash
 ssh-copy-id user@serverip
 ```
-3. Configurando permissões
+5. Configurando permissões (no servidor com o usuário deploy).
 Na pasta /home/user/.ssh de as permissões da seguinte forma:
 ```bash
 chmod 600 authorized_keys 
 cd ..
 chmod 700 .ssh
 ```
-
+6. Instalando o docker no Linux. Realizar este comando com o usuário deploy.
+```bash
 sudo apt install docker.io
+```
+7. Dando permissão para o usuário deploy trabalhar com o docker. Realizar este comando com o usuário deploy.
+```bash
 usermod -aG docker deploy 
-
-com o usuário deploy 
+```
+8. Criando máquina docker postgresdb com o nome 'database' (Guarde a senha passada e nunca utilize ela)
+```bash
 docker run --name database -e POSTGRES_PASSWORD=senha -p 17863:5432 --restart always -d postgres
-
+```
+9. Acessando máquina docker criada, criando primeiro banco de dados e configurando usuario para o banco. 
+```bash
 docker exec -it database /bin/bash
 su postgres
 psql
 CREATE DATABASE empresas;
 CREATE USER appemp WITH ENCRYPTED PASSWORD='senha';
 GRANT ALL PRIVILEGES ON DATABASE empresas TO appemp;
-
-docker cp /home/deploy/dataEmpresa/socio_202008221650.csv database:/dados/socio.csv
-rsync -avzP -e 'ssh -p22' socio_202008221650.csv.zip deploy@207.244.254.79:/home/deploy/dataEmpresa
-
+```
+10. Se necessário copiar arquivos do servidor para a máquina docker. Duvidas, documentação do docker.
+```bash
+docker cp /home/deploy/file.csv database:/dados/file.csv
+```
+11. Se necessário copiar arquivos de sua máquina para o servidor: 
+```bash
+rsync -avzP -e 'ssh -p22' arquivo.csv deploy@ipservidor:/home/deploy
+```
 Pronto!!!
 
 https://www.youtube.com/watch?v=ICIz5dE3Xfg
