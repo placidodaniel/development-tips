@@ -190,6 +190,8 @@ CREATE DATABASE empresas;
 CREATE USER appemp WITH ENCRYPTED PASSWORD='senha';
 GRANT ALL PRIVILEGES ON DATABASE empresas TO appemp;
 
+docker cp /home/deploy/dataEmpresa/socio_202008221650.csv database:/dados/socio.csv
+rsync -avzP -e 'ssh -p22' socio_202008221650.csv.zip deploy@207.244.254.79:/home/deploy/dataEmpresa
 
 Pronto!!!
 
