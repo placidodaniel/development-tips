@@ -262,7 +262,10 @@ server {
   }
 }
 ```
-Instalando um certificado SSL Gratuito:
+14.Instalando um certificado SSL Gratuito:
+Acessar o site: https://letsencrypt.org/ e o site https://certbot.eff.org/ em outra aba.
+
+Informe o servidor e o sistema operacional (NGINX e UBUNTU Versão)
 
 
 Pronto!!!
