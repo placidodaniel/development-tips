@@ -210,6 +210,42 @@ docker cp /home/deploy/file.csv database:/dados/file.csv
 ```bash
 rsync -avzP -e 'ssh -p22' arquivo.csv deploy@ipservidor:/home/deploy
 ```
+12. Instalando o PM2:
+O PM2 é um gerenciador de processos para nodejs. 
+Para instalar, basta:
+```bash
+sudo npm install -g pm2
+```
+Pegar o endereço bin do node:
+```bash
+npm global bin
+```
+Editar o arquivo de inicialização do Linux 
+```bash
+vim ~/.bashrc
+```
+Adicione o código abaixo na última linha do script:
+```bash
+export PATH="$(npm bin):$PATH"
+```
+Rodar a alteração salva
+```bash
+source ~/.bashrc
+```
+Abaixo Segue os comandos para rodar para que sempre que o servidor reiniciar, o PM2 reinicie juntamente com o servidor.
+```bash
+pm2 startup ubuntu -u deploy
+sudo env PATH=$PATH:/usr/bin pm2 startup ubuntu -u deploy --hp /home/deploy
+```
+13. Inslando o NGINX
+O NGINX é um servidor de proxy reverso. Ele serve para redirecionar um endereço para um local ou porta especifico. 
+Para instalar, com o usuário root: 
+```bash
+apt install nginx
+cd /etc/nginx/sites-available/
+```
+
+
 Pronto!!!
 
 https://www.youtube.com/watch?v=ICIz5dE3Xfg
