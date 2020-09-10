@@ -347,6 +347,16 @@ https://devcenter.heroku.com/articles/getting-started-with-nodejs
 heroku ps:scale web=0 
 heroku ps:scale web=1 
 ```
+# Rabbitmq
+## Como habilitar os módulos do rabbit, permitindo console de administração.
+Para instalar via docker:
+
+```bash
+mkdir -p /docker/rabbitmq/data
+docker run -d --name rabbitmq  -p 5672:5672  -p 15672:15672  --restart=always  --hostname rabbitmq-master  -v /docker/rabbitmq/data:/var/lib/rabbitmq  rabbitmq
+docker exec -it rabbitmq /bin/bash
+rabbitmq-plugins enable rabbitmq_management
+```
 
 ## Tenho Dúvidas... O que Faço?! ❓
 
