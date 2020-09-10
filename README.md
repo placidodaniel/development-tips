@@ -356,6 +356,7 @@ mkdir -p /docker/rabbitmq/data
 docker run -d --name rabbitmq  -p 5672:5672  -p 15672:15672  --restart=always  --hostname rabbitmq-master  -v /docker/rabbitmq/data:/var/lib/rabbitmq  rabbitmq
 docker exec -it rabbitmq /bin/bash
 rabbitmq-plugins enable rabbitmq_management
+rabbitmq-plugins enable rabbitmq_shovel rabbitmq_shovel_management
 ```
 
 ## Tenho Dúvidas... O que Faço?! ❓
