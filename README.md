@@ -358,6 +358,10 @@ docker exec -it rabbitmq /bin/bash
 rabbitmq-plugins enable rabbitmq_management
 rabbitmq-plugins enable rabbitmq_shovel rabbitmq_shovel_management
 ```
+Instalando Versão com gerenciador web
+```bash
+docker run -d --name rabbitmq -p 2672:5672 -p 25672:15672 --restart=always --hostname rabbitmq-master -v /docker/rabbitmq/data:/var/lib/rabbitmq rabbitmq:3-management
+```
 
 ## Tenho Dúvidas... O que Faço?! ❓
 
