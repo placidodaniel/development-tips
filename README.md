@@ -202,6 +202,14 @@ CREATE DATABASE empresas;
 CREATE USER appemp WITH ENCRYPTED PASSWORD='senha';
 GRANT ALL PRIVILEGES ON DATABASE empresas TO appemp;
 ```
+9.1 Permitindo função 'unaccent' no database Postgres:
+Acessando a máquina onde o postgres esta instalado, executar o seguinte comando:
+```bash
+psql
+\c database //Conectando o database que se deseja instalar a função
+CREATE EXTENSION unaccent;
+```
+
 10. Se necessário copiar arquivos do servidor para a máquina docker. Duvidas, documentação do docker.
 ```bash
 docker cp /home/deploy/file.csv database:/dados/file.csv
