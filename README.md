@@ -275,7 +275,11 @@ Acessar o site: https://letsencrypt.org/ e o site https://certbot.eff.org/ em ou
 
 Informe o servidor e o sistema operacional (NGINX e UBUNTU Versão)
 
-
+15. Instalando o redis com docker 
+--appendonly yes: Configuração para redis persistente. 
+```bash
+sudo docker run --restart=always -v /docker/redis:/data --name redis -d redis redis-server --appendonly yes 
+```
 Pronto!!!
 
 https://www.youtube.com/watch?v=ICIz5dE3Xfg
