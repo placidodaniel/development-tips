@@ -280,6 +280,10 @@ Informe o servidor e o sistema operacional (NGINX e UBUNTU Versão)
 ```bash
 sudo docker run --restart=always -v /docker/redis:/data --name redis -d redis redis-server --appendonly yes 
 ```
+16. Instalando o apenas o redis no seu Linux
+```bash
+sudo apt-get install redis-tools
+```
 Pronto!!!
 
 https://www.youtube.com/watch?v=ICIz5dE3Xfg
