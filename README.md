@@ -278,7 +278,7 @@ Informe o servidor e o sistema operacional (NGINX e UBUNTU Versão)
 15. Instalando o redis com docker 
 --appendonly yes: Configuração para redis persistente. 
 ```bash
-sudo docker run --restart=always -p 6379:6379 -v /docker/redis:/data --name redis -d redis redis-server --appendonly yes 
+sudo docker run --restart=always -p 6379:6379 -v /docker/redis:/data --name redis -d redis redis-server --requirepass Redis2019! --appendonly yes 
 ```
 16. Instalando o apenas o redis-cli no seu Linux
 ```bash
