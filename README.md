@@ -134,7 +134,7 @@ docker cp nomeimagem:/home/arquivoRemoto.csv /home/repositorioLocal
 ```
 # Configurando postgres com docker, entendendo todos os parâmetros que são passados ao container docker com a imagem do postgres. 
 ```bash
-> docker run --name rede-postgres -e "POSTGRES_PASSWORD=Postgres2020!" -p 5432:5432 -v E:\Users\daniel\apps\postgres\db:/var/lib/postgresql/data -d postgres
+> docker run --name rede-postgres -e "POSTGRES_PASSWORD=Postgres2020!" -itd --shm-size=1g -p 5432:5432 -v E:\Users\daniel\apps\postgres\db:/var/lib/postgresql/data -d postgres
 ```
 - O atributo `name` especifica o nome do container a ser gerado (teste-postgres);
 - No atributo `POSTGRES_PASSWORD` foi indicada a senha do administrador (para o usuário default postgres);
@@ -191,7 +191,7 @@ usermod -aG docker deploy
 ```
 8. Criando máquina docker postgresdb com o nome 'database' (Guarde a senha passada e nunca utilize ela)
 ```bash
-docker run --name database -e POSTGRES_PASSWORD=senha -p 17863:5432 --restart always -d postgres
+docker run --name database -e POSTGRES_PASSWORD=senha -p 17863:5432 -v /docker/postgresql:/var/lib/postgresql/data --restart always -d -itd --shm-size=1g postgres
 ```
 9. Acessando máquina docker criada, criando primeiro banco de dados e configurando usuario para o banco. 
 ```bash
@@ -287,6 +287,9 @@ sudo apt-get install redis-tools
 Pronto!!!
 
 https://www.youtube.com/watch?v=ICIz5dE3Xfg
+
+## Resolvendo problema com "pq: could not resize shared memory segment. No space left on device" no postgre:
+https://medium.com/@shanikanishadhi1992/how-to-resolve-error-could-not-resize-shared-memory-segment-postgresql-no-space-left-on-device-8344c0ed3272
 
 ## Resolvendo problemas de pacotes quebrados. 
 1. Se você já tentou de tudo e não conseguiu resolver seu problema com pacotes quebrados no linux, utilize o comando abaixo, removendo os pacotes recursivamente (Do último para o primeiro em termos de dependência).
