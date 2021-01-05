@@ -284,6 +284,38 @@ sudo docker run --restart=always -p 6379:6379 -v /docker/redis:/data --name redi
 ```bash
 sudo apt-get install redis-tools
 ```
+17. Instalando o wordpress com mysql, via docker-compose:
+- Crie o arquivo docker-compose.yml conforme exemplo abaixo:
+```bash
+version: '2'
+services:
+   db:
+     image: mysql:latest
+     volumes:
+       - /home/user/docker/mysql:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+```
+- Salve arquivo, depois, no diretório onde foi criado, digite o comando:
+```
+docker-compose up -d
+```
 Pronto!!!
 
 https://www.youtube.com/watch?v=ICIz5dE3Xfg
