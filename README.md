@@ -385,6 +385,17 @@ git checkout -b <nome-do-seu-branch-local> origin/<nome-do-branch-remoto>
 ```bash
 git checkout -b <nome-do-seu-branch-local>
 ```
+## Para atualizar um repositório já existente para outro novo:
+Remova a pasta .git do diretório principal do repostório, em seguida, execute os seguintes comandos.
+```bash
+git init
+git remote add origin https://github.com/placidodaniel/REPOSITORIO.git
+git add .
+git commit -m "first commit"
+git branch -M main
+git push -u origin main
+```bash
+
 # heroku
 
 ## Como fazer deploy de uma aplicação com node no heroku:
