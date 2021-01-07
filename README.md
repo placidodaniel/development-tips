@@ -394,8 +394,7 @@ git add .
 git commit -m "first commit"
 git branch -M main
 git push -u origin main
-```bash
-
+```
 # heroku
 
 ## Como fazer deploy de uma aplicação com node no heroku:
