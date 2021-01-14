@@ -428,6 +428,7 @@ docker run -d --name rabbitmq -p 2672:5672 -p 25672:15672 --restart=always --hos
 1. Instalando o php no Ubuntu:
 ```bash
 sudo apt install php
+sudo apt install phpunit
 ```
 2. Instalando o composer no Ubuntu:
 ```bash
