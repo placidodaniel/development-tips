@@ -453,8 +453,7 @@ composer create-project --prefer-dist laravel/laravel:^7.0 nome-projeto
 
 4.2. Pasta `resources` é onde ficam as `views` do projeto;
 4.2.1. O `blade` é uma ferramenta para escrever o PHP na página do frontend. Facilita muito para utilização por meio de designers escreverem o código HTML junto com as rotinas de desenvolvimento.
-
-4.3. 
+ 
 
 5. Rodando o projeto em Laravel.
 Dentro do diretório do projeto, execute o seguinte comando:
@@ -465,6 +464,11 @@ php artisan serve
 As rotas são configuradas no diretório `routes`.
 6.1. Arquivo `api.php` configura as rotas de api, exemplo: APIs do Google.
 6.2. Arquivo `web.php` configura as rotas de endereços web. Exemplo: Site de usuários
+
+7. Instalando o Laravel 5 - Repository
+```bash
+composer require prettus/l5-repository
+```
 
 
 
