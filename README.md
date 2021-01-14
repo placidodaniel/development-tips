@@ -455,6 +455,10 @@ Dentro do diretório do projeto, execute o seguinte comando:
 ```bash
 php artisan serve
 ```
+6. Rotas no Laravel:
+As rotas são configuradas no diretório `routes`.
+6.1. Arquivo `api.php` configura as rotas de api, exemplo: APIs do Google.
+6.2. Arquivo `web.php` configura as rotas de endereços web. Exemplo: Site de usuários
 
 
 
