@@ -443,6 +443,18 @@ composer #testar se esta executando o composer via comando.
 ```bash
 composer create-project --prefer-dist laravel/laravel:^7.0 nome-projeto
 ```
+4. Entendendo o projeto do Laravel.
+4.1. Pasta `app` é onde tudo acontece;
+4.1.1. Pasta `middleware` é a funcionalidade que fica entre o backend e o frontend, podem ser feitas validações aqui, como validações de acesso;
+4.1.2. Pasta `controllers` é onde ficam os controllers do projeto;
+4.2. Pasta `resources` é onde ficam as `views` do projeto;
+4.3. 
+
+5. Rodando o projeto em Laravel.
+Dentro do diretório do projeto, execute o seguinte comando:
+```bash
+php artisan server
+```
 
 
 
