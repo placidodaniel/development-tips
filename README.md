@@ -453,7 +453,7 @@ composer create-project --prefer-dist laravel/laravel:^7.0 nome-projeto
 5. Rodando o projeto em Laravel.
 Dentro do diretório do projeto, execute o seguinte comando:
 ```bash
-php artisan server
+php artisan serve
 ```
 
 
