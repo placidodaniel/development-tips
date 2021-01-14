@@ -425,7 +425,7 @@ docker run -d --name rabbitmq -p 2672:5672 -p 25672:15672 --restart=always --hos
 ```
 
 # PHP com Laravel
-1 . Instalando o php no Ubuntu:
+1. Instalando o php no Ubuntu:
 ```bash
 sudo apt install php
 ```
@@ -437,6 +437,10 @@ echo $HASH -- conferir se o hash bate com o site do composer, evitando possívei
 php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" 
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 composer --testar se esta executando o composer via comando.
+```
+3. Criando um projeto com Laravel no Ubuntu, setando uma versão especifica:
+```bash
+composer create-project --prefer-dist laravel/laravel:^7.0 nome-projeto
 ```
 
 
