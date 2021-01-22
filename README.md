@@ -470,7 +470,10 @@ As rotas são configuradas no diretório `routes`.
 composer require prettus/l5-repository
 ```
 
-
+# Atualizar o google chrome no ubuntu.
+```bash
+sudo apt-get --only-upgrade install google-chrome-stable^
+```
 
 ## Tenho Dúvidas... O que Faço?! ❓
 
