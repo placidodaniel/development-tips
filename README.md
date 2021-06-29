@@ -474,7 +474,13 @@ composer require prettus/l5-repository
 ```bash
 sudo apt-get --only-upgrade install google-chrome-stable^
 ```
+# Fazendo backup de bancos gigantes no postgres
+```bash
+sudo pg_dump --host localhost --port 5863 --username username --format c -d empresas --file /home/deploy/backup_db_29062021.backup
+```
 
 ## Tenho Dúvidas... O que Faço?! ❓
 
 Caso tenham dúvidas ou sugerirem dicas ou correções, sintam-se a vontade em abrir uma **[ISSUE AQUI](https://github.com/infolouco/development-tips/issues)**. Assim que possível, estarei respondendo as todas as dúvidas que tiverem!
+
+
