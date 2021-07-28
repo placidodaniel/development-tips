@@ -157,6 +157,10 @@ usermod -aG sudo deploy
 ```bash
 ssh-keygen -t rsa
 ```
+4. (Opcional) Se você quiser acessar um usuário específico sem ter a senha com o modo root, use:
+```bash
+sudo su deploy
+```
 Depois de inserir este comando, algumas novas perguntas aparecerão:
 
 Insira o arquivo no qual deseja salvar a chave (/home/user/.ssh/id_rsa):
