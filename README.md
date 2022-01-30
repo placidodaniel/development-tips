@@ -429,12 +429,18 @@ docker run -d --name rabbitmq -p 2672:5672 -p 25672:15672 --restart=always --hos
 ```
 
 # PHP com Laravel
-1. Instalando o php no Ubuntu:
+1. Instalando o apache no Ubuntu:
 ```bash
-sudo apt install php
-sudo apt install phpunit
+sudo apt install apache2=2.4.29-1ubuntu4.21
 ```
-2. Instalando o composer no Ubuntu:
+2. Instalando o php no ubuntu:
+```bash
+sudo apt -y install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt -y install php7.4 libapache2-mod-php7.4 php7.4-mysql php7.4-xml php7.4-mbstring unzip php7-zip
+```
+3. Instalando o composer no Ubuntu:
 ```bash
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 HASH=`curl -sS https://composer.github.io/installer.sig`
@@ -443,33 +449,33 @@ php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Insta
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 composer #testar se esta executando o composer via comando.
 ```
-3. Criando um projeto com Laravel no Ubuntu, setando uma versão especifica:
+4. Criando um projeto com Laravel no Ubuntu, setando uma versão especifica:
 ```bash
 composer create-project --prefer-dist laravel/laravel:^7.0 nome-projeto
 ```
-4. Entendendo o projeto do Laravel.
+5. Entendendo o projeto do Laravel.
 
-4.1. Pasta `app` é onde tudo acontece;
+5.1. Pasta `app` é onde tudo acontece;
 
-4.1.1. Pasta `middleware` é a funcionalidade que fica entre o backend e o frontend, podem ser feitas validações aqui, como validações de acesso;
+5.1.1. Pasta `middleware` é a funcionalidade que fica entre o backend e o frontend, podem ser feitas validações aqui, como validações de acesso;
 
-4.1.2. Pasta `controllers` é onde ficam os controllers do projeto;
+5.1.2. Pasta `controllers` é onde ficam os controllers do projeto;
 
-4.2. Pasta `resources` é onde ficam as `views` do projeto;
-4.2.1. O `blade` é uma ferramenta para escrever o PHP na página do frontend. Facilita muito para utilização por meio de designers escreverem o código HTML junto com as rotinas de desenvolvimento.
+5.2. Pasta `resources` é onde ficam as `views` do projeto;
+5.2.1. O `blade` é uma ferramenta para escrever o PHP na página do frontend. Facilita muito para utilização por meio de designers escreverem o código HTML junto com as rotinas de desenvolvimento.
  
 
-5. Rodando o projeto em Laravel.
+6. Rodando o projeto em Laravel.
 Dentro do diretório do projeto, execute o seguinte comando:
 ```bash
 php artisan serve
 ```
-6. Rotas no Laravel:
+7. Rotas no Laravel:
 As rotas são configuradas no diretório `routes`.
-6.1. Arquivo `api.php` configura as rotas de api, exemplo: APIs do Google.
-6.2. Arquivo `web.php` configura as rotas de endereços web. Exemplo: Site de usuários
+7.1. Arquivo `api.php` configura as rotas de api, exemplo: APIs do Google.
+7.2. Arquivo `web.php` configura as rotas de endereços web. Exemplo: Site de usuários
 
-7. Instalando o Laravel 5 - Repository
+8. Instalando o Laravel 5 - Repository
 ```bash
 composer require prettus/l5-repository
 ```
