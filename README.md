@@ -438,7 +438,7 @@ sudo apt install apache2=2.4.29-1ubuntu4.21
 sudo apt -y install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
-sudo apt -y install php7.4 libapache2-mod-php7.4 php7.4-mysql php7.4-xml php7.4-mbstring unzip php7-zip
+sudo apt -y install php7.4 libapache2-mod-php7.4 php7.4-mysql php7.4-xml php7.4-mbstring unzip php7.4-zip
 ```
 3. Instalando o composer no Ubuntu:
 ```bash
