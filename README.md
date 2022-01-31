@@ -449,6 +449,7 @@ docker run -d --name rabbitmq -p 2672:5672 -p 25672:15672 --restart=always --hos
 ```bash
 sudo apt install apache2=2.4.29-1ubuntu4.21
 sudo a2enmod ssl
+sudo a2enmod rewrite
 ```
 2. Instalando o php no ubuntu:
 ```bash
