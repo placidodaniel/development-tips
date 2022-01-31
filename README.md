@@ -1,6 +1,22 @@
 # development-tips - Dicas úteis que fui coletando para auxiliar no dev.
 Fique a vontade para contribuir!
-
+# Flutter
+1. Verificando emulators instalados pelo Android Studio
+```bash
+flutter emulators
+```
+2. Executando Emulator:
+```bash
+flutter emulators --launch "Xaiomi_4GB_API_29_Android_10"
+```
+3. Verificando ID do emulator conectado
+```bash
+flutter devices
+```
+4. Executando aplicativo com o ID do device conectado:
+```bash
+flutter run -d "emulator-5554"
+```
 # NodeJS
 
 ## Criando aplicação com nodejs:
