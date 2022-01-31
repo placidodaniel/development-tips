@@ -450,33 +450,44 @@ php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Insta
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 composer #testar se esta executando o composer via comando.
 ```
-4. Criando um projeto com Laravel no Ubuntu, setando uma versão especifica:
+4. Supervisor no Ubuntu:
+```bash
+sudo apt update && sudo apt install supervisor
+sudo systemctl status supervisor
+```
+5. Permissão do projeto Laravel:
+```bash
+sudo addgroup ci web 
+sudo addgroup www-data web
+sudo chmod www-data:web storage/ -R
+```
+6. Criando um projeto com Laravel no Ubuntu, setando uma versão especifica:
 ```bash
 composer create-project --prefer-dist laravel/laravel:^7.0 nome-projeto
 ```
-5. Entendendo o projeto do Laravel.
+6. Entendendo o projeto do Laravel.
 
-5.1. Pasta `app` é onde tudo acontece;
+6.1. Pasta `app` é onde tudo acontece;
 
-5.1.1. Pasta `middleware` é a funcionalidade que fica entre o backend e o frontend, podem ser feitas validações aqui, como validações de acesso;
+6.1.1. Pasta `middleware` é a funcionalidade que fica entre o backend e o frontend, podem ser feitas validações aqui, como validações de acesso;
 
-5.1.2. Pasta `controllers` é onde ficam os controllers do projeto;
+6.1.2. Pasta `controllers` é onde ficam os controllers do projeto;
 
-5.2. Pasta `resources` é onde ficam as `views` do projeto;
-5.2.1. O `blade` é uma ferramenta para escrever o PHP na página do frontend. Facilita muito para utilização por meio de designers escreverem o código HTML junto com as rotinas de desenvolvimento.
+6.2. Pasta `resources` é onde ficam as `views` do projeto;
+6.2.1. O `blade` é uma ferramenta para escrever o PHP na página do frontend. Facilita muito para utilização por meio de designers escreverem o código HTML junto com as rotinas de desenvolvimento.
  
 
-6. Rodando o projeto em Laravel.
+7. Rodando o projeto em Laravel.
 Dentro do diretório do projeto, execute o seguinte comando:
 ```bash
 php artisan serve
 ```
-7. Rotas no Laravel:
+8. Rotas no Laravel:
 As rotas são configuradas no diretório `routes`.
-7.1. Arquivo `api.php` configura as rotas de api, exemplo: APIs do Google.
-7.2. Arquivo `web.php` configura as rotas de endereços web. Exemplo: Site de usuários
+8.1. Arquivo `api.php` configura as rotas de api, exemplo: APIs do Google.
+8.2. Arquivo `web.php` configura as rotas de endereços web. Exemplo: Site de usuários
 
-8. Instalando o Laravel 5 - Repository
+9. Instalando o Laravel 5 - Repository
 ```bash
 composer require prettus/l5-repository
 ```
