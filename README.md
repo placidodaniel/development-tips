@@ -405,6 +405,10 @@ git checkout -b <nome-do-seu-branch-local> origin/<nome-do-branch-remoto>
 ```bash
 git checkout -b <nome-do-seu-branch-local>
 ```
+## Copiar um arquivo de uma branch especifica para outra branch
+```bash
+git restore --source DEV -- caminho/arquivo/arquivo.txt
+```
 ## Para atualizar um repositório já existente para outro novo:
 Remova a pasta .git do diretório principal do repostório, em seguida, execute os seguintes comandos.
 ```bash
